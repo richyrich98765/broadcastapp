@@ -10,6 +10,7 @@ This app itself comes from Microsoft’s VSCode pages
 https://code.visualstudio.com/docs/python/tutorial-flask
 
 Tree
+```
 .
 |- .gitignore
 |- LICENSE
@@ -29,7 +30,7 @@ Tree
       |- contact.html
       |- about.html
       |- hello_there.html
-
+```
 
 GitHub
 https://github.com/richyrich98765/test-flask-app
@@ -66,7 +67,7 @@ It will look for a file main.py, and uses that as the starting point of the app.
 My main.py just pulls in hello_app’s app instance. The app is instantiated inside the hello_app package’s __init__.py. That file also pulls in the view, and when we start to add database stuff, the table code too.
 
 Build and Run
-'''
+```
 docker build --tag flaskdo . 
 docker container run --rm --publish 80:80 --detach --name flaskdo flaskdo:latest
-'''
+```
