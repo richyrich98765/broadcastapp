@@ -35,6 +35,7 @@ GitHub
 https://github.com/richyrich98765/test-flask-app
 
 Dockerfile
+```
 # base image
 FROM tiangolo/uwsgi-nginx-flask:python3.8-alpine-2020-12-19
 
@@ -57,6 +58,7 @@ ENV STATIC_PATH hello_app/static
 
 # nginx running on port 80
 EXPOSE 80
+```
 
 Description
 Tiangolo’s image provides the base alpine – python – nginx, with uWSGI installed. This image also does the entry point / command thingy, so one isn’t present in the Dockerfile.
@@ -64,5 +66,7 @@ It will look for a file main.py, and uses that as the starting point of the app.
 My main.py just pulls in hello_app’s app instance. The app is instantiated inside the hello_app package’s __init__.py. That file also pulls in the view, and when we start to add database stuff, the table code too.
 
 Build and Run
+'''
 docker build --tag flaskdo . 
 docker container run --rm --publish 80:80 --detach --name flaskdo flaskdo:latest
+'''
